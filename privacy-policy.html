@@ -429,8 +429,8 @@
     <section class="clause" id="about">
       <p class="clause-num">01</p>
       <h2>About this app</h2>
-      <p>Script Manager and Downloader is a companion utility for <strong>Vinzz Tools</strong>. When you choose a script from Vinzz Tools, it hands this app a link; this app downloads that file to your device and, if you ask it to, extracts it into a game's data folder. Everything it does happens locally, on your device.</p>
-      <p class="muted">This app is an independent, unofficial tool. It is not affiliated with, endorsed by, or associated with Moonton or <em>Mobile Legends: Bang Bang</em>; that name is referenced only because it describes where an extracted file is placed on your own device.</p>
+      <p>Script Manager and Downloader is a companion download-and-extract tool for a separate script browser app. When you choose a script there, it hands this app a link; this app downloads that file to your device and, if you ask it to, extracts it into a game's data folder. Everything it does happens locally, on your device.</p>
+      <p class="muted">This app is an independent, unofficial tool and is not affiliated with, endorsed by, or associated with any third-party game or publisher.</p>
     </section>
 
     <section class="clause" id="data">
@@ -438,10 +438,10 @@
       <h2>Information we handle</h2>
       <p>We do not operate any servers, accounts, or backend for this app, so there is nothing for us — the developer — to collect. Everything below stays on your device:</p>
       <div class="box">
-        <p><strong>Deep-link data.</strong> When Vinzz Tools hands off a script, it includes a file URL, a file name, and up to two preview image URLs. This app keeps that information in memory only, to show you the download screen. It is never written to disk, logged, or sent to us.</p>
-        <p><strong>Folder access.</strong> To list the <code>.zip</code> files in your <code>Download/Vinzz Tools</code> folder, Android asks you to grant access once through its standard folder picker. The resulting permission reference is saved only in this app's own private storage on your device, so it can remember your choice — it never leaves your device.</p>
+        <p><strong>Deep-link data.</strong> When the script browser app hands off a script, it includes a file URL, a file name, and up to two preview image URLs. This app keeps that information in memory only, to show you the download screen. It is never written to disk, logged, or sent to us.</p>
+        <p><strong>Folder access.</strong> To list the <code>.zip</code> files in your downloads, Android asks you to grant access once through its standard folder picker. The resulting permission reference is saved only in this app's own private storage on your device, so it can remember your choice — it never leaves your device.</p>
       </div>
-      <p>The app does make network requests, but only to fetch what you asked for: the script file and preview images at the URLs Vinzz Tools provided, and nothing else. Those requests go directly from your device to whichever server hosts that file — not through us.</p>
+      <p>The app does make network requests, but only to fetch what you asked for: the script file and preview images at the URLs the script browser app provided, and nothing else. Those requests go directly from your device to whichever server hosts that file — not through us.</p>
     </section>
 
     <section class="clause" id="permissions">
@@ -456,11 +456,11 @@
           <tbody>
             <tr>
               <td class="perm"><code>INTERNET</code></td>
-              <td class="why">Downloads the script file and preview images from the URL Vinzz Tools gives you.</td>
+              <td class="why">Downloads the script file and preview images from the URL the script browser app gives you.</td>
             </tr>
             <tr>
               <td class="perm"><code>READ_EXTERNAL_STORAGE</code><br><code>WRITE_EXTERNAL_STORAGE</code></td>
-              <td class="why">Lets the app list and save files inside the <code>Download/Vinzz Tools</code> folder you choose.</td>
+              <td class="why">Lets the app list and save files inside the download folder you choose.</td>
             </tr>
             <tr>
               <td class="perm"><code>DOWNLOAD_WITHOUT_NOTIFICATION</code></td>
@@ -497,7 +497,7 @@
     <section class="clause" id="retention">
       <p class="clause-num">06</p>
       <h2>Storage &amp; retention</h2>
-      <p>Because nothing is collected off your device, there is nothing for us to retain or delete on your behalf. Downloaded scripts remain in your <code>Download/Vinzz Tools</code> folder until you remove them yourself, and the saved folder-access reference is cleared automatically if you clear the app's storage or uninstall it.</p>
+      <p>Because nothing is collected off your device, there is nothing for us to retain or delete on your behalf. Downloaded scripts remain in your chosen download folder until you remove them yourself, and the saved folder-access reference is cleared automatically if you clear the app's storage or uninstall it.</p>
     </section>
 
     <section class="clause" id="children">
