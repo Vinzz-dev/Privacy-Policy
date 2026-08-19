@@ -1,0 +1,529 @@
+<title>Script Manager and Downloader — Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #f6f7fb;
+    --surface: #ffffff;
+    --surface-2: #eef0f8;
+    --border: #dde1ee;
+    --text: #161b2e;
+    --text-muted: #5a6180;
+    --text-faint: #8a90ab;
+    --accent: #3757c4;
+    --accent-strong: #2947a8;
+    --accent-soft: #eaefff;
+    --good: #17835c;
+    --good-soft: #e5f5ee;
+    --code-bg: #f0f1f7;
+    --shadow: 0 1px 2px rgba(22, 27, 46, 0.04), 0 8px 24px rgba(22, 27, 46, 0.05);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0c0f1a;
+      --surface: #141828;
+      --surface-2: #182036;
+      --border: #252d44;
+      --text: #e4eaf8;
+      --text-muted: #8592b4;
+      --text-faint: #5c6789;
+      --accent: #7098f5;
+      --accent-strong: #93b1ff;
+      --accent-soft: #182448;
+      --good: #4bcf9b;
+      --good-soft: #10261d;
+      --code-bg: #10142280;
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 32px rgba(0, 0, 0, 0.35);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #0c0f1a;
+    --surface: #141828;
+    --surface-2: #182036;
+    --border: #252d44;
+    --text: #e4eaf8;
+    --text-muted: #8592b4;
+    --text-faint: #5c6789;
+    --accent: #7098f5;
+    --accent-strong: #93b1ff;
+    --accent-soft: #182448;
+    --good: #4bcf9b;
+    --good-soft: #10261d;
+    --code-bg: #10142280;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 32px rgba(0, 0, 0, 0.35);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+    font-size: 16.5px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 200px;
+    gap: 64px;
+  }
+
+  @media (max-width: 980px) {
+    .page { grid-template-columns: minmax(0, 1fr); gap: 0; }
+    aside.toc { display: none; }
+  }
+
+  /* ---------- Header ---------- */
+
+  header.hero {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .hero-mark {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .mark {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: linear-gradient(155deg, var(--accent), var(--accent-strong));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    box-shadow: var(--shadow);
+  }
+  .mark svg { width: 24px; height: 24px; }
+
+  .hero-id {
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+  }
+  .hero-eyebrow {
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 0 0 4px;
+  }
+  .hero-app {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text);
+  }
+
+  h1.title {
+    grid-column: 1 / -1;
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-weight: 700;
+    font-size: clamp(30px, 4vw, 40px);
+    letter-spacing: -0.015em;
+    line-height: 1.15;
+    text-wrap: balance;
+    margin: -8px 0 8px;
+  }
+
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+  }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    font-weight: 500;
+    padding: 5px 11px;
+    border-radius: 999px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+  }
+  .chip b { color: var(--text); font-weight: 600; }
+
+  /* ---------- At-a-glance ---------- */
+
+  .glance {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 48px;
+    box-shadow: var(--shadow);
+  }
+  @media (max-width: 720px) {
+    .glance { grid-template-columns: repeat(2, 1fr); }
+  }
+  .glance-item {
+    background: var(--surface);
+    padding: 20px 18px;
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+  }
+  .glance-q {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin: 0 0 10px;
+    line-height: 1.4;
+  }
+  .glance-a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--good);
+  }
+  .glance-a svg { width: 15px; height: 15px; flex: none; }
+
+  /* ---------- Layout columns ---------- */
+
+  main { min-width: 0; max-width: 700px; }
+
+  aside.toc {
+    position: sticky;
+    top: 40px;
+    align-self: start;
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+  }
+  aside.toc h2 {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    margin: 0 0 14px;
+  }
+  aside.toc ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-left: 1px solid var(--border);
+  }
+  aside.toc a {
+    display: block;
+    padding: 2px 0 2px 16px;
+    margin-left: -1px;
+    border-left: 1px solid transparent;
+    font-size: 13px;
+    color: var(--text-muted);
+    text-decoration: none;
+    line-height: 1.4;
+  }
+  aside.toc a:hover { color: var(--accent); border-left-color: var(--accent); }
+
+  /* ---------- Prose ---------- */
+
+  section.clause {
+    padding: 34px 0;
+    border-bottom: 1px solid var(--border);
+    scroll-margin-top: 32px;
+  }
+  section.clause:last-of-type { border-bottom: none; }
+
+  .clause-num {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 12.5px;
+    color: var(--accent);
+    font-weight: 500;
+    margin: 0 0 6px;
+  }
+
+  h2 {
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    letter-spacing: -0.01em;
+    margin: 0 0 14px;
+    text-wrap: balance;
+  }
+
+  h3 {
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    margin: 22px 0 8px;
+    color: var(--text);
+  }
+
+  p { margin: 0 0 14px; color: var(--text); }
+  p.muted { color: var(--text-muted); font-size: 15px; }
+  p:last-child { margin-bottom: 0; }
+
+  ul.clean { margin: 0 0 14px; padding-left: 22px; }
+  ul.clean li { margin-bottom: 8px; }
+  ul.clean li::marker { color: var(--accent); }
+
+  strong { font-weight: 600; }
+  em { font-style: italic; color: var(--text-muted); }
+
+  a.inline { color: var(--accent); text-decoration-color: var(--accent-soft); text-underline-offset: 2px; }
+  a.inline:hover { text-decoration-color: var(--accent); }
+
+  code {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.87em;
+    background: var(--code-bg);
+    padding: 0.1em 0.4em;
+    border-radius: 5px;
+    color: var(--text);
+  }
+
+  /* ---------- Permissions table ---------- */
+
+  .ptable {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-size: 13.5px;
+    margin-top: 6px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .ptable-wrap { overflow-x: auto; border-radius: 12px; }
+  .ptable th {
+    text-align: left;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    background: var(--surface-2);
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+  }
+  .ptable td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    color: var(--text-muted);
+  }
+  .ptable tr:last-child td { border-bottom: none; }
+  .ptable td.perm code { white-space: nowrap; }
+  .ptable td.why { color: var(--text); }
+
+  /* ---------- Data summary box ---------- */
+
+  .box {
+    background: var(--accent-soft);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin: 18px 0;
+  }
+  .box p { margin: 0; color: var(--text); font-size: 15px; }
+  .box p + p { margin-top: 8px; }
+
+  /* ---------- Footer ---------- */
+
+  footer {
+    grid-column: 1 / -1;
+    margin-top: 24px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--text-faint);
+  }
+  footer a { color: var(--text-muted); }
+</style>
+
+<div class="page">
+
+  <header class="hero">
+    <div class="hero-id">
+      <div class="hero-mark">
+        <span class="mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3l7 3.2v5.4c0 4.6-3 8.9-7 10.4-4-1.5-7-5.8-7-10.4V6.2L12 3z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M9 12l2.2 2.2L15.5 10" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <div>
+          <p class="hero-eyebrow">Privacy Policy</p>
+          <p class="hero-app">Script Manager and Downloader</p>
+        </div>
+      </div>
+    </div>
+    <div class="hero-meta">
+      <span class="chip">Package <b>com.scriptdownloader</b></span>
+      <span class="chip">Effective <b>August 13, 2026</b></span>
+      <span class="chip">Platform <b>Android</b></span>
+    </div>
+  </header>
+
+  <h1 class="title">How Script Manager and Downloader handles your data</h1>
+
+  <div class="glance">
+    <div class="glance-item">
+      <p class="glance-q">Collects personal data?</p>
+      <p class="glance-a"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M6.5 10.3l2.3 2.3 4.7-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>No</p>
+    </div>
+    <div class="glance-item">
+      <p class="glance-q">Shares data with third parties?</p>
+      <p class="glance-a"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M6.5 10.3l2.3 2.3 4.7-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>No</p>
+    </div>
+    <div class="glance-item">
+      <p class="glance-q">Ads, analytics, or trackers?</p>
+      <p class="glance-a"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M6.5 10.3l2.3 2.3 4.7-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>No</p>
+    </div>
+    <div class="glance-item">
+      <p class="glance-q">Account or sign-in required?</p>
+      <p class="glance-a"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M6.5 10.3l2.3 2.3 4.7-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>No</p>
+    </div>
+  </div>
+
+  <aside class="toc">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#about">1. About this app</a></li>
+      <li><a href="#data">2. Information we handle</a></li>
+      <li><a href="#permissions">3. Permissions</a></li>
+      <li><a href="#shizuku">4. Shizuku &amp; extraction</a></li>
+      <li><a href="#sharing">5. Sharing &amp; third parties</a></li>
+      <li><a href="#retention">6. Storage &amp; retention</a></li>
+      <li><a href="#children">7. Children's privacy</a></li>
+      <li><a href="#changes">8. Changes to this policy</a></li>
+      <li><a href="#contact">9. Contact</a></li>
+    </ol>
+  </aside>
+
+  <main>
+
+    <section class="clause" id="about">
+      <p class="clause-num">01</p>
+      <h2>About this app</h2>
+      <p>Script Manager and Downloader is a companion utility for <strong>Vinzz Tools</strong>. When you choose a script from Vinzz Tools, it hands this app a link; this app downloads that file to your device and, if you ask it to, extracts it into a game's data folder. Everything it does happens locally, on your device.</p>
+      <p class="muted">This app is an independent, unofficial tool. It is not affiliated with, endorsed by, or associated with Moonton or <em>Mobile Legends: Bang Bang</em>; that name is referenced only because it describes where an extracted file is placed on your own device.</p>
+    </section>
+
+    <section class="clause" id="data">
+      <p class="clause-num">02</p>
+      <h2>Information we handle</h2>
+      <p>We do not operate any servers, accounts, or backend for this app, so there is nothing for us — the developer — to collect. Everything below stays on your device:</p>
+      <div class="box">
+        <p><strong>Deep-link data.</strong> When Vinzz Tools hands off a script, it includes a file URL, a file name, and up to two preview image URLs. This app keeps that information in memory only, to show you the download screen. It is never written to disk, logged, or sent to us.</p>
+        <p><strong>Folder access.</strong> To list the <code>.zip</code> files in your <code>Download/Vinzz Tools</code> folder, Android asks you to grant access once through its standard folder picker. The resulting permission reference is saved only in this app's own private storage on your device, so it can remember your choice — it never leaves your device.</p>
+      </div>
+      <p>The app does make network requests, but only to fetch what you asked for: the script file and preview images at the URLs Vinzz Tools provided, and nothing else. Those requests go directly from your device to whichever server hosts that file — not through us.</p>
+    </section>
+
+    <section class="clause" id="permissions">
+      <p class="clause-num">03</p>
+      <h2>Permissions</h2>
+      <p>The app requests the following Android permissions. Each one exists to perform an action you directly initiate — none of them are used to collect data about you.</p>
+      <div class="ptable-wrap">
+        <table class="ptable">
+          <thead>
+            <tr><th>Permission</th><th>What it's for</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="perm"><code>INTERNET</code></td>
+              <td class="why">Downloads the script file and preview images from the URL Vinzz Tools gives you.</td>
+            </tr>
+            <tr>
+              <td class="perm"><code>READ_EXTERNAL_STORAGE</code><br><code>WRITE_EXTERNAL_STORAGE</code></td>
+              <td class="why">Lets the app list and save files inside the <code>Download/Vinzz Tools</code> folder you choose.</td>
+            </tr>
+            <tr>
+              <td class="perm"><code>DOWNLOAD_WITHOUT_NOTIFICATION</code></td>
+              <td class="why">Lets Android's own Download Manager save the file without a persistent notification while it downloads.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="clause" id="shizuku">
+      <p class="clause-num">04</p>
+      <h2>Shizuku &amp; extraction</h2>
+      <p>Extracting a downloaded script into a game's data folder requires broader file access than a normal app is given. For that one action, this app optionally uses <a class="inline" href="https://shizuku.rikka.app/" target="_blank" rel="noopener">Shizuku</a>, a separate, open-source system tool you install and run yourself.</p>
+      <ul class="clean">
+        <li>Shizuku is never required just to browse or download — only to extract a file.</li>
+        <li>You grant it permission explicitly, inside Shizuku's own prompt, each time it's needed.</li>
+        <li>The extraction command runs entirely on your device; no file contents or paths are sent anywhere.</li>
+      </ul>
+    </section>
+
+    <section class="clause" id="sharing">
+      <p class="clause-num">05</p>
+      <h2>Sharing &amp; third parties</h2>
+      <p>We do not sell, rent, or share any data with third parties, because we do not collect any in the first place. This app contains:</p>
+      <ul class="clean">
+        <li><strong>No</strong> analytics or usage-tracking software development kits (SDKs)</li>
+        <li><strong>No</strong> advertising SDKs</li>
+        <li><strong>No</strong> crash-reporting services</li>
+        <li><strong>No</strong> user accounts, logins, or profiles</li>
+      </ul>
+    </section>
+
+    <section class="clause" id="retention">
+      <p class="clause-num">06</p>
+      <h2>Storage &amp; retention</h2>
+      <p>Because nothing is collected off your device, there is nothing for us to retain or delete on your behalf. Downloaded scripts remain in your <code>Download/Vinzz Tools</code> folder until you remove them yourself, and the saved folder-access reference is cleared automatically if you clear the app's storage or uninstall it.</p>
+    </section>
+
+    <section class="clause" id="children">
+      <p class="clause-num">07</p>
+      <h2>Children's privacy</h2>
+      <p>This app is not directed at children and does not knowingly collect information from anyone, of any age — it simply has no mechanism to collect information at all.</p>
+    </section>
+
+    <section class="clause" id="changes">
+      <p class="clause-num">08</p>
+      <h2>Changes to this policy</h2>
+      <p>If this policy changes, the "Effective" date at the top of this page will be updated. Continued use of the app after a change constitutes acceptance of the revised policy.</p>
+    </section>
+
+    <section class="clause" id="contact">
+      <p class="clause-num">09</p>
+      <h2>Contact</h2>
+      <p>This app and this policy are provided by <strong>Vinzz</strong>. Questions about privacy or this policy can be sent to:</p>
+      <p><a class="inline" href="mailto:auguisvincent@gmail.com">auguisvincent@gmail.com</a></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>© 2026 Vinzz — Script Manager and Downloader</span>
+    <span>Last updated August 13, 2026</span>
+  </footer>
+
+</div>
